@@ -198,37 +198,39 @@ export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100">
       {/* Navigation */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-full bg-gray-900/95 backdrop-blur-sm p-3 px-6 shadow-xl"
-      >
-        <Link href="/">
-          <motion.div
-            className="flex items-center gap-2 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      <div className="inset-0 top-5 fixed z-10">
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto flex max-w-6xl items-center justify-between rounded-full bg-gray-900/95 backdrop-blur-sm p-3 px-6 shadow-xl"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg">
-              <span className="text-sm font-bold text-white">AI</span>
-            </div>
-            <span className="text-xl font-bold text-white">ClinicAgent</span>
-          </motion.div>
-        </Link>
+            <Link href="/">
+              <motion.div
+                className="flex items-center gap-2 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg">
+                  <span className="text-sm font-bold text-white">AI</span>
+                </div>
+                <span className="text-xl font-bold text-white">ClinicAgent</span>
+              </motion.div>
+            </Link>
 
-        <Link href="/">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="ghost" className="text-white hover:text-blue-200">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
-          </motion.div>
-        </Link>
-      </motion.nav>
+            <Link href="/">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="ghost" className="text-white hover:text-blue-200">
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Back to Home
+                </Button>
+              </motion.div>
+            </Link>
+          </motion.nav>
+      </div>
 
       {/* Main Content */}
-      <main className="mx-auto max-w-2xl px-4 py-12">
+      <main className="mx-auto  max-w-2xl px-4 py-[8rem]">
         <motion.div className="text-center mb-8" variants={staggerContainer} initial="initial" animate="animate">
           <motion.h1 variants={fadeInUp} className="mb-4 text-4xl md:text-5xl font-bold text-gray-900">
             Join ClinicAgent

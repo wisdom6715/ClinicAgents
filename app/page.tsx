@@ -82,55 +82,57 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100">
       {/* Navigation */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-full bg-gray-900/95 backdrop-blur-sm p-3 px-6 shadow-xl"
-      >
-        <motion.div
-          className="flex items-center gap-2"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      <div className="inset-0 top-5 fixed z-10">
+        <motion.nav
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto pd-20 mt-4 flex max-w-6xl items-center justify-between rounded-full bg-gray-900/95 backdrop-blur-sm p-3 px-6 shadow-xl"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg">
-            <span className="text-sm font-bold text-white">AI</span>
-          </div>
-          <span className="text-xl font-bold text-white">ClinicAgent</span>
-        </motion.div>
-
-        <div className="hidden md:flex items-center gap-8">
-          <motion.a
-            href="#features"
-            className="text-gray-300 hover:text-white transition-colors"
-            whileHover={{ y: -2 }}
+          <motion.div
+            className="flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            Features
-          </motion.a>
-          <motion.a
-            href="#testimonials"
-            className="text-gray-300 hover:text-white transition-colors"
-            whileHover={{ y: -2 }}
-          >
-            Testimonials
-          </motion.a>
-          <motion.a href="#about" className="text-gray-300 hover:text-white transition-colors" whileHover={{ y: -2 }}>
-            About
-          </motion.a>
-        </div>
-
-        <Link href="/signup">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2 text-white shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg">
+              <span className="text-sm font-bold text-white">AI</span>
+            </div>
+            <span className="text-xl font-bold text-white">ClinicAgent</span>
           </motion.div>
-        </Link>
-      </motion.nav>
+
+          <div className="hidden md:flex items-center gap-8">
+            <motion.a
+              href="#features"
+              className="text-gray-300 hover:text-white transition-colors"
+              whileHover={{ y: -2 }}
+            >
+              Features
+            </motion.a>
+            <motion.a
+              href="#testimonials"
+              className="text-gray-300 hover:text-white transition-colors"
+              whileHover={{ y: -2 }}
+            >
+              Testimonials
+            </motion.a>
+            <motion.a href="#about" className="text-gray-300 hover:text-white transition-colors" whileHover={{ y: -2 }}>
+              About
+            </motion.a>
+          </div>
+
+          <Link href="/signup">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2 text-white shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
+          </Link>
+        </motion.nav>
+      </div>
 
       {/* Hero Section */}
-      <main className="mx-auto max-w-6xl px-4 py-16">
+      <main className="mx-auto max-w-6xl px-4 py-[8rem]">
         <motion.div
           className="text-center"
           variants={staggerContainer}
