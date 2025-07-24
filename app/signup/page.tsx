@@ -198,7 +198,7 @@ export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100">
       {/* Navigation */}
-      <div className="inset-0 top-5 fixed z-10">
+      <div className="inset-0 top-5 fixed z-10 h-4">
           <motion.nav
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
